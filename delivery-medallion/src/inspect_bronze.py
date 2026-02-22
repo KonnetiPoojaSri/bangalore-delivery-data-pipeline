@@ -12,7 +12,7 @@ def inspect_bronze():
         "bronze_feedback_errors"
     ]
 
-    print("🔍 Inspecting Bronze Layer Tables...\n")
+    print(" Inspecting Bronze Layer Tables...\n")
 
     for table in tables:
         print(f" Table: {table}")
