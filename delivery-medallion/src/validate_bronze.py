@@ -11,18 +11,18 @@ def validate_bronze():
         "bronze_feedback_errors"
     ]
 
-    print("🔍 Validating Bronze Layer Table Row Counts...\n")
+    print(" Validating Bronze Layer Table Row Counts...\n")
 
     for table in tables:
         try:
             cur = conn.execute(f"SELECT COUNT(*) FROM {table}")
             count = cur.fetchone()[0]
-            print(f"📦 {table}: {count} rows")
+            print(f" {table}: {count} rows")
         except sqlite3.Error as e:
-            print(f"⚠️ {table}: Error reading table → {e}")
+            print(f" {table}: Error reading table → {e}")
 
     conn.close()
-    print("\n✅ Bronze Layer validation completed.\n")
+    print("\n Bronze Layer validation completed.\n")
 
 
 if __name__ == "__main__":
