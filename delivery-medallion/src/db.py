@@ -32,5 +32,5 @@ def get_connection():
 # =========================================================
 if __name__ == "__main__":
     conn = get_connection()
-    print(f"✅ Connected to database: {DB_PATH.name}")
+    print(f" Connected to database: {DB_PATH.name}")
     conn.close()
