@@ -15,11 +15,11 @@ def inspect_bronze():
     print("🔍 Inspecting Bronze Layer Tables...\n")
 
     for table in tables:
-        print(f"📦 Table: {table}")
+        print(f" Table: {table}")
         try:
             rows = conn.execute(f"PRAGMA table_info({table})").fetchall()
             if not rows:
-                print("  ⚠️ Table not found or has no columns.\n")
+                print("  Table not found or has no columns.\n")
                 continue
 
             print("  Columns:")
@@ -39,10 +39,10 @@ def inspect_bronze():
                 print("  (No data rows yet)\n")
 
         except sqlite3.Error as e:
-            print(f"  ❌ Error inspecting {table}: {e}\n")
+            print(f"   Error inspecting {table}: {e}\n")
 
     conn.close()
-    print("✅ Bronze Layer inspection complete.\n")
+    print(" Bronze Layer inspection complete.\n")
 
 
 if __name__ == "__main__":
